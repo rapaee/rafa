@@ -218,3 +218,13 @@ img {
   color: grey;
   transition: all 0.5s ease;
 }
+.book-room a{
+  text-decoration: none;
+  color: white;
+}
+.book-room button{
+  background: blue;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 40px;
+}
