@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Ranayu</title>
+    <link rel="stylesheet" href="room.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="http://localhost/1/userr.html" onclick="closeNav()"
+          >Dashboard</a
+        >
+        <a href="#" onclick="closeNav()">Room</a>
+        <a href="http://localhost/1/dining.html" onclick="closeNav()">Dining</a>
+        <a href="#" onclick="closeNav()">Service And Facilities</a>
+        <a href="#" onclick="closeNav()">Gallery</a>
+      </div>
+
+      <div id="debar">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+      <div class="judul">
+        <a href="#" style="text-decoration: none">
+          <h1>Ranayu</h1>
+          <!-- <h2>Ranayu</h2> -->
+        </a>
+      </div>
+      <table class="desk1">
+        <tr>
+          <td>
+            <i class="fa fa-map-marker">
+              Bantul jl.Ali Maksum Saraban Rt 05, Daerah Istimewa Yogyakarta</i
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-phone"> +6289505147281</i> |
+            <i class="fa fa-envelope"> rafan7750@gmail.com</i>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <div class="pesan">
+          <a href=""><h2>Booking</h2></a>
+        </div>
+      </div>
+    </header>
+    <div class="slider-container">
+      <div class="slide fade">
+        <img src="1.jpg" alt="Image 1" />
+      </div>
+      <div class="slide fade">
+        <img src="2.jpg" alt="Image 2" />
+      </div>
+      <div class="slide fade">
+        <img src="3.jpg" alt="Image 2" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+    <div class="nav2">
+      <ul>
+        <li><a href="">Room</a></li>
+        <li><a href="">Special Booking</a></li>
+      </ul>
+    </div>
+    <div class="room">
+      <h1>Room</h1>
+      <p>
+        The Hotel Ranayu stunning and exquisite interior design celebrates
+        tradition and modernity. A total 274 fully equipped suites and rooms
+        provide heavenly accommodation and a variety of possibilities to choose
+        from Deluxe, Premier, Executive and Suites.
+      </p>
+    </div>
+    <div class="flex">
+      <div class="image-container">
+        <img src="1.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text">Deluxe Room</h2>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="2.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text">Standard Room</h2>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="3.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text">Suite</h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("debar").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("debar").style.marginLeft = "0";
+      }
+    </script>
+    <script>
+      let slideIndex = 0;
+
+      function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change slide every 2 seconds
+      }
+
+      // Run the slideshow when the page loads
+      document.addEventListener("DOMContentLoaded", showSlides);
+    </script>
+  </body>
+</html>

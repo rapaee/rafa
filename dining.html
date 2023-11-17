@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Ranayu</title>
+    <link rel="stylesheet" href="dining.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="http://localhost/1/userr.html" onclick="closeNav()">Dashboard</a>
+        <a href="http://localhost/1/room.html" onclick="closeNav()">Room</a>
+        <a href="#" onclick="closeNav()">Dining</a>
+        <a href="#" onclick="closeNav()">Service And Facilities</a>
+        <a href="#" onclick="closeNav()">Gallery</a>
+      </div>
+
+      <div id="debar">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
+      <div class="judul">
+        <a href="#" style="text-decoration: none">
+          <h1>Ranayu</h1>
+          <!-- <h2>Ranayu</h2> -->
+        </a>
+      </div>
+      <table class="desk1">
+        <tr>
+          <td>
+            <i class="fa fa-map-marker">
+              Bantul jl.Ali Maksum Saraban Rt 05, Daerah Istimewa Yogyakarta</i
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <i class="fa fa-phone"> +6289505147281</i> |
+            <i class="fa fa-envelope"> rafan7750@gmail.com</i>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <div class="pesan">
+          <a href=""><h2>Booking</h2></a>
+        </div>
+      </div>
+    </header>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("debar").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("debar").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
