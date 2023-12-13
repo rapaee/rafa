@@ -4,11 +4,347 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotel Ranayu</title>
-    <link rel="stylesheet" href="room.css">
+    <!-- <link rel="stylesheet" href="room.css"> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 1;
+  border-bottom: 1px solid black;
+}
+.desk1 {
+  float: right;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 350px;
+}
+.judul h1 {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pesan {
+  background: #333;
+  width: 150px;
+  height: 115px;
+  text-align: center;
+  float: right;
+  position: relative;
+  margin-left: 144px;
+  margin-top: 195px;
+  bottom: 210px;
+}
+.pesan h2 {
+  height: 100%;
+  margin-top: 10px;
+  color: rgb(248, 242, 242);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.pesan a {
+  text-decoration: none;
+  color: black;
+}
+/*menu*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  width: 100px;
+  height: 153%;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#debar {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+.slider-container {
+  position: relative;
+  float: left;
+  margin: auto;
+  overflow: hidden;
+}
+.slide {
+  display: none;
+}
+img {
+  background-size: cover;
+  width: 1348px;
+  height: 500px;
+}
+.room h1 {
+  text-align: center;
+  margin-left: 30px;
+  padding-top: 5%;
+}
+.room p {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.image-container {
+  position: relative;
+  width: 500px; /* Adjust to the width of your image */
+  height: 300px; /* Adjust to the height of your image */
+  overflow: hidden;
+  margin: 20px;
+}
+
+.normal-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background color of the overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+/*bagian overlay gambar 1 dan 3*/
+.text1 {
+  color: #fff; /* Text color */
+  font-size: 30px; /* Text size */
+  margin-right: 0;
+  margin-bottom: 10%;
+}
+.ava1{
+  position: relative;
+  margin-top: 70px;
+  margin-left: -153px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.des1{
+  margin-left: -178px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.book-room1 {
+  background-color: blue;
+  position: relative;
+  margin-top: 150px;
+  margin-left: -158px;
+  text-align: center;
+}
+.book-room1 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+/*bagian overlay gambar 2 dan 5*/
+.text2{
+  color: #fff; /* Text color */
+  font-size: 30px; /* Text size */
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+.ava2{
+  position: relative;
+  margin-top: 70px;
+  margin-left: -210px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.des2{
+  margin-left: -240px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.book-room2 {
+  background-color: blue;
+  position: relative;
+  margin-top: 150px;
+  margin-left: -205px;
+  text-align: center;
+}
+.book-room2 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+/*bagian overlay gambar 3 dan 6*/
+.text3{
+  color: #fff; /* Text color */
+  font-size: 30px; /* Text size */
+  margin-right: -43%;
+  margin-bottom: 10%;
+}
+.ava3{
+  position: relative;
+  margin-top: 70px;
+  margin-left: 80px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.des3{
+  margin-left: 52px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.book-room3 {
+  background-color: blue;
+  position: relative;
+  margin-top: 150px;
+  margin-left: -158px;
+  text-align: center;
+}
+.book-room3 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+.image-container:hover .normal-image {
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+/*untuk membuat vertikal image*/
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.flix{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav2 ul {
+  list-style: none;
+  margin-left: 1100px;
+  margin-top: 30px;
+}
+.nav2 ul li {
+  display: inline-block;
+  padding-top: 10%;
+}
+
+.nav2 ul li a {
+  text-decoration: none;
+  padding: 5px 15px;
+  color: black;
+}
+.nav2 ul li a:hover {
+  color: grey;
+  transition: all 0.5s ease;
+}
+.book-room1 a{
+  text-decoration: none;
+  color: white;
+}
+.book-room2 a{
+  text-decoration: none;
+  color: white;
+}.book-room3 a{
+  text-decoration: none;
+  color: white;
+}
+.bg_special{
+  background-color: #333;
+}
+.special_offers{
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+.special_offers2{
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+    </style>
   </head>
   <body>
     <header>
@@ -67,11 +403,11 @@
     </div>
     <div class="nav2">
       <ul>
-        <li><a href="">Room</a></li>
-        <li><a href="">Special Booking</a></li>
+        <li><a href="#room">Room</a></li>
+        <li><a href="#special">Special Offers</a></li>
       </ul>
     </div>
-    <div class="room">
+    <div class="room" id="room">
       <h1>Room</h1>
       <p>
         The Hotel Ranayu stunning and exquisite interior design celebrates
@@ -84,30 +420,87 @@
       <div class="image-container">
         <img src="1.jpg" alt="Normal Image" class="normal-image" />
         <div class="overlay">
-          <h2 class="text">Deluxe Room</h2>
-          <div class="book-room">
-            <button><a href="">Book Room</a></button>
+          <h2 class="text1">Deluxe Room</h2>
+          <div class="ket1">
+            <h2 class="ava1">AVAILABLE FORM </h2>
+            <p class="des1">8,550,000 IDR</p>
+          </div>
+          <div class="book-room1">
+            <h2><a href="">Book Room</a></h2>
           </div>
         </div>
       </div>
       <div class="image-container">
         <img src="2.jpg" alt="Normal Image" class="normal-image" />
         <div class="overlay">
-          <h2 class="text">Standard Room</h2>
-          <div class="book-room">
-            <button><a href="">Book Room</a></button>
+          <h2 class="text2">Standard Room</h2>
+          <div class="ket2">
+            <h2 class="ava2">AVAILABLE FORM </h2>
+            <p class="des2">8,550,000 IDR</p>
+          </div>
+          <div class="book-room2">
+            <h2><a href="">Book Room</a></h2>
           </div>
         </div>
       </div>
       <div class="image-container">
         <img src="3.jpg" alt="Normal Image" class="normal-image" />
         <div class="overlay">
-          <h2 class="text">Suite</h2>
-          <div class="book-room">
-            <button><a href="">Book Room</a></button>
+          <h2 class="text3" >Suite</h2>
+          <div class="ket3">
+            <h2 class="ava3">AVAILABLE FORM </h2>
+            <p class="des3">8,550,000 IDR</p>
+          </div>
+          <div class="book-room3">
+            <h2><a href="">Book Room</a></h2>
           </div>
         </div>
       </div>
+    </div>
+    <div class="flix">
+      <div class="image-container">
+        <img src="4.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text1">Deluxe Room</h2>
+          <div class="ket">
+            <h2 class="ava1">AVAILABLE FORM </h2>
+            <p class="des1">8,550,000 IDR</p>
+          </div>
+          <div class="book-room1">
+            <h2><a href="">Book Room</a></h2>
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="5.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text2">Standard Room</h2>
+          <div class="ket">
+            <h2 class="ava2">AVAILABLE FORM </h2>
+            <p class="des2">8,550,000 IDR</p>
+          </div>
+          <div class="book-room2">
+            <h2><a href="">Book Room</a></h2>
+          </div>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="6.jpg" alt="Normal Image" class="normal-image" />
+        <div class="overlay">
+          <h2 class="text3">Suite</h2>
+          <div class="ket3">
+            <h2 class="ava3">AVAILABLE FORM </h2>
+            <p class="des3">8,550,000 IDR</p>
+          </div>
+          <div class="book-room3">
+            <h2><a href="">Book Room</a></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg_special">
+      <h1 class="special_offers" id="special">Special Offers</h1>
+      <h2 class="special_offers2">Direct Booking Benefits</h2>
     </div>
     <script>
       function openNav() {

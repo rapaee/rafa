@@ -32,12 +32,6 @@ header {
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* .judul a h2 {
-        margin-left: 195px;
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
-      } */
 .pesan {
   background: #333;
   width: 150px;
@@ -185,6 +179,7 @@ img {
 .text {
   color: #fff; /* Text color */
   font-size: 18px; /* Text size */
+  text-align: center;
 }
 .image-container:hover .normal-image {
   transform: scale(1.1);
@@ -195,6 +190,11 @@ img {
 }
 /*untuk membuat vertikal image*/
 .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.flix{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -218,13 +218,60 @@ img {
   color: grey;
   transition: all 0.5s ease;
 }
-.book-room a{
+.book-room1 a{
   text-decoration: none;
   color: white;
 }
-.book-room button{
-  background: blue;
+.book-room2 a{
+  text-decoration: none;
+  color: white;
+}.book-room3 a{
+  text-decoration: none;
+  color: white;
+}
+.book-room1 {
+  background-color: blue;
   position: relative;
-  border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-left: -113px;
+  text-align: center;
+}
+.book-room2 {
+  background-color: blue;
+  position: relative;
+  margin-top: 150px;
+  margin-left: -120px;
+  text-align: center;
+}
+.book-room3 {
+  background-color: blue;
+  position: relative;
+  margin-top: 50px;
+  margin-left: -150px;
+  text-align: center;
+}
+.book-room1 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+.book-room2 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+.book-room3 h2 a:hover{
+  background-color: #f1f1f1;
+  color: black;
+}
+.bg_special{
+  background-color: #333;
+}
+.special_offers{
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+.special_offers2{
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
